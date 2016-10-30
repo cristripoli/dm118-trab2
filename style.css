@@ -1,0 +1,187 @@
+/*Resets auxiliares*/
+/*Resets*/
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, fieldset, legend, label, table, header, footer, nav, section,figure { 
+	margin: 0; 
+	padding: 0;
+	border: 0
+}
+
+ul,ol{
+    list-style: none
+}
+
+/*o width dos elementos agora será a soma do conteúdo com a borda e o padding.*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+/*Fim resets*/
+
+/*Clear fix, Importante para ajudar nos problemas com float
+https://css-tricks.com/snippets/css/clear-fix/
+*/
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/*Fim clearfix*/
+
+/*Estilo geral*/
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1,125em; /* 18 / 16 (16 padrão do navegador) */
+}
+
+p{
+    font-size: 0,888em; /* 16/18 */
+}
+
+a{
+    text-decoration: none
+}
+
+.currentContent{
+    border-bottom: 2px solid red
+}
+
+/*Fim estilo geral*/
+
+/*Layout*/
+body{
+    background-color: #fff;
+    width: 100%; /* 980px */
+    margin: 0 auto
+}
+
+img{max-width: 100%}
+
+#header{
+    height: 6,6326%; /* 65/980 */
+}
+
+#content section{
+    padding: 10.2048% 0;  /* 100/980 */
+}
+
+#header,#footer{
+    background-color: #4A148C;
+    color: #fff
+}
+
+#header{
+   width: 100%; /* 980px*/ 
+   position: fixed;
+   z-index: 100;
+   top: 0
+}
+
+#header h1{
+    float: left;
+    padding: 1.2244%; /* 12/980 */
+}
+
+#main-nav{
+    float: right;
+    padding: 2.2959%; /* 22.5/980 */
+}
+ 
+#main-nav ul li{
+    display: inline
+}
+
+#main-nav a{
+    padding: 0.6666em; /* 15/22.5 */
+    color: #fff
+}
+
+#content h1{
+    text-align: center
+}
+
+/*Fim layout*/
+
+
+/*Home*/
+
+#home figure{
+    float: left
+}
+
+#home p{
+    line-height: 1.5;
+    float: right;
+    width: 40.8163%; /* 400/980 */
+}
+
+/*Portfolio*/
+
+#portfolio figure{
+    float: left;
+    max-width: 33.3333%; /* 320/960 */
+    padding: 1.02040%; /* 10/980 */
+}
+ 
+#portfolio img{
+    width: 93.75%; /* 300/320 */
+}
+
+/*Sobre*/
+
+#sobre p{
+    display: inline-block;
+    width: 45.9143%; /* 450/980 */
+    line-height: 1.5;
+    margin: 0 0 3% 3%; /*30/980*/
+}
+
+/*footer*/
+
+#footer p{
+    text-align: center;
+    padding: 3%; /* 30/980 */
+}
+
+/*Media Queries*/
+
+
+
+@media all and (max-width: 845px){
+
+    #home p{
+        width: auto;
+     }
+}
+
+@media screen and (max-width: 767px) {
+
+    #portfolio figure{ 
+        max-width:50%;
+	}
+}
+
+@media all and (max-width: 495px){/*Pode ser convertido para em*/
+     #home figure{
+        display:none;
+     }
+
+   	#portfolio figure{
+        max-width: 95%;
+        padding: 0
+	}
+
+    #sobre p{
+        width: auto;
+        margin: 0;
+        padding: 0
+     }
+}
+
+
